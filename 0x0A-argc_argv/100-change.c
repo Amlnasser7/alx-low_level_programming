@@ -3,7 +3,9 @@
 #include <stdlib.h>
 		
 #include "main.h"
-			
+		
+
+		
 /**
 		
  * main - prints the minimum number of coins to
@@ -14,10 +16,12 @@
 		
  * @argv: array of arguments
 		
+ *
+		
  * Return: 0 (Success), 1 (Error)
 		
  */
-
+		
 int main(int argc, char *argv[])
 		
 {
@@ -32,7 +36,7 @@ int main(int argc, char *argv[])
 		
 	{
 		
-	printf("Error\n");
+		printf("Error\n");
 		
 		return (1);
 		
@@ -55,3 +59,29 @@ int main(int argc, char *argv[])
 		return (0);
 		
 	}
+		
+
+		
+	for (j = 0; j < 5 && num >= 0; j++)
+		
+	{
+		
+		while (num >= coins[j])
+		
+		{
+		
+			result++;
+		
+			num -= coins[j];
+		
+		}
+		
+	}
+		
+
+		
+	printf("%d\n", result);
+		
+	return (0);
+		
+}
